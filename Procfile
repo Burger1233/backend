@@ -1,1 +1,1 @@
-web: nodemon service
+web: npm run start
