@@ -14,13 +14,14 @@ app.use("/api/v1/users", users)
 app.use("/api/v1/login", login)
 app.use("/api/v1/usersnb", usersnb)
 
-app.use("*", (req, res) => res.status(404).json(
-    { error: "not found" }
-))
-
 app.get("/", (req, res) => {
     res.send("Hello World!");
 });
+
+
+app.use("*", (req, res) => res.status(404).json(
+    { error: "not found" }
+))
 
 
 export default app;
