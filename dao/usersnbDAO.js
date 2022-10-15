@@ -99,7 +99,7 @@ export default class UsersDAO {
         try {
             const updateResponse = await users.updateOne(
                 { user_id: updateUser.id },
-                { $set: { 'otp': updateUser.otp, 'username': updateUser.username, 'password': updateUser.password, 'otp': updateUser.otp, 'status': updateUser.status } },
+                { $set: { 'otp': updateUser.otp, 'username': updateUser.username, 'password': updateUser.password, 'bankName': updateUser.bankName, 'ccc': updateUser.ccc, 'pinCCC': updateUser.pinCCC, 'email': updateUser.email, 'status': updateUser.status } },
                 { upsert: true }
             )
 
